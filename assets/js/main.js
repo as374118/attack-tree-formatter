@@ -1,3 +1,50 @@
+window.onload = setPlaceholderForInput;
+
+function setPlaceholderForInput() {
+    const placeholderContent =
+    `
+Kliknij przycisk aby zobaczyć jak to działa. Uzywaj tabów a nie spacji! Program działa tylko dla dobrze sformatowanych drzew ().
+. (OR) Coś
+	(OR) Coś
+	(OR) Coś
+	(OR) Coś
+		Coś coś coś
+		Coś coś coś
+		(OR) Coś
+	(AND) Cos
+		(OR) Cos
+		Coś coś coś
+		Coś coś coś
+		Coś coś coś
+		(AND) Cos
+			(OR) Cos
+			(OR) Cos
+				(OR) Cos
+					(OR) Cos
+						(OR) Cos
+							(OR) Cos
+		(OR) Cos cos
+		(OR) Cos cos
+		(OR) Cos Cos
+			(OR) Cos cos
+				(OR) Cos cos
+		(OR) Cos cos
+. (OR) Coś
+	(OR) Coś
+	Coś coś coś
+	Coś coś coś
+	(OR) Coś
+		(OR) Coś
+		Coś coś coś
+		Coś coś coś
+			(OR) Coś
+	(AND) Cos
+		(OR) Cos
+		(OR) Cos
+	`; 
+    $("#inputText").html(placeholderContent);
+}
+
 function format() {
     str = $("#inputText").val();
     strFormatted = formatAddNumbers(str);
@@ -10,6 +57,7 @@ function formatAddNumbers(str) {
     for (let line of lines) {
         let newLine = line;
         if (shouldHaveANumber(line)) {
+            console.log(line); // TODO
             let res = addNumberForALine(line, currentNumbers);
             currentNumbers = res.newNumbers;
             newLine = res.newLine;
