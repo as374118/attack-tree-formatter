@@ -1,0 +1,62 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+#logo {
+  /* width: 5vw; */
+  height: 20px;
+}
+
+body {
+  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  text-align: center;
+}
+
+#main-section {
+  /* background-image: url("../images/bg-candidate-1.jpg"); */
+  background-size: cover;
+  /* opacity: 0.8; */
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+}
+
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+
+.carousel-inner img {
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  min-height: 200px;
+}
+
+/* #give-money-button {
+  width: 15vw;
+  height: 4vw;
+  font-size: 60%;
+} */
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
+}
+
+textarea {
+  margin-top: 30px;
+}
+
+#formatButton {
+  margin-top: 10px;
+  width: 200px;
+}
